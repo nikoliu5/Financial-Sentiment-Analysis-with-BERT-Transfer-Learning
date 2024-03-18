@@ -1,57 +1,66 @@
 # Financial-Sentiment-Analysis-with-BERT-Transfer-Learning
 This project utilizes BERT transfer learning to classify sentiment in financial texts
 
-
-This project explores the application of BERT (Bidirectional Encoder Representations from Transformers) for sentiment analysis in financial texts. By leveraging transfer learning, we fine-tune a pre-trained BERT model to classify the sentiment of financial news articles and reports as positive, neutral, or negative. This repository contains a Jupyter notebook that guides you through the process of data preparation, model training, and evaluation.
-
 <img src="./src_img/sentiment_analysis.jpg" width="650">
 
 ## Project Overview
-
-- **Objective**: To apply BERT for accurate sentiment classification of financial texts.
-- **Data Source**: Utilize a curated dataset of financial news articles from various sources.
-- **Approach**: Employ transfer learning techniques with a pre-trained BERT model.
+This project focuses on performing sentiment analysis on sentences from the financial domain using transfer learning with the BERT (Bidirectional Encoder Representations from Transformers) model. The objective is to develop a model that can accurately classify the sentiment of financial phrases as Negative, Neutral, or Positive.
 
 ## Data
+The Financial PhraseBank dataset, a collection of hand-annotated sentences with sentiment labels, is utilized in this project. The dataset offers various "flavors" or subsets based on the level of agreement among annotators. For the basic part of the project, the "all agree" flavor is used.
 
-The dataset comprises financial news articles collected from multiple sources, labeled with sentiments as positive, negative, or neutral. We split the dataset into training, validation, and testing parts to ensure a robust evaluation of the model's performance.
+[Financial PhraseBank - Hugging Face](https://huggingface.co/datasets/financial_phrasebank)
 
-## Model Training and Evaluation
+## Transfer Learning Approach
+The project leverages transfer learning, which involves using a pre-trained BERT model and adapting it to the specific task of financial sentiment analysis. The main steps include:
+
+Loading a pre-trained BERT model from the HuggingFace platform.
+Freezing certain layers of the BERT model to retain the learned representations.
+Adding a custom classification head on top of the frozen BERT layers.
+Fine-tuning the model on the Financial PhraseBank dataset.
+By freezing layers of the BERT model, the project aims to utilize the powerful language understanding capabilities of BERT while reducing the computational overhead and preventing overfitting to the specific domain.
 
 
+## Project Outline
 ```
-BERT Model Training
+Financial Sentiment Analysis with BERT Transfer Learning
 |
-├── Data Preprocessing
-|   |
-|   └── Tokenization, Padding, and Masking
+├── Initial Setup
+| ├── Installation of Required Packages
+| ├── GPU Availability Check
+| └── TensorFlow Version Verification
 |
-├── Model Fine-tuning
-|   |
-|   └── Training with Custom Dataset
+├── Modeling Pipeline (Part I)
+| ├── Data Acquisition
+| | └── Importing HuggingFace Dataset
+| ├── Data Analysis
+| | └── Exploratory Data Analysis
+| ├── Data Preparation
+| | ├── Transformation
+| | ├── Tokenization
+| | └── Addressing Imbalanced Data Issues
+| └── Model Training
+| ├── Training the Classifier Head
+| ├── Training All Layers
+| └── Error Analysis
 |
-└── Evaluation
-    |
-    ├── Accuracy, Precision, Recall, and F1-Score
+└── Performance Enhancement (Part II)
+├── Advanced Data Handling
+| └── TensorFlow Dataset (TFDS) Integration
+├── Data Imbalance
+├── Model Architecture
+| └── Custom Classification Head Design
+├── In-Depth Error Analysis
+├── Dataset Variation
+| └── Utilizing Different Dataset "Flavors"
+├── Pre-Trained Model Experimentation
+| └── Testing Various Pre-Trained Models
+└── Fine-Tuning
+└── Experiment with Few-shot Learning
 ```
 
-### Transfer Learning with BERT
-
-- **Fine-tuning**: We adapt the pre-trained BERT model to our specific task of sentiment analysis.
-- **Training Strategy**: Utilize AdamW optimizer with a learning rate schedule that includes a warm-up phase.
-
-### Results
-
+### Analysis and Results
 Our model achieves notable performance in classifying sentiments of financial texts, demonstrating the effectiveness of transfer learning with BERT for this domain. Detailed results and performance metrics are presented in the notebook.
 
 ## Requirements
-
-To run the notebook, you will need the following libraries:
-
-- transformers
-- torch
-- numpy
-- pandas
-- matplotlib
-
 Please refer to `requirements.txt` for a complete list of dependencies.
