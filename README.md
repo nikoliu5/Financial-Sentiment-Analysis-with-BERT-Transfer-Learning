@@ -19,7 +19,7 @@ The dataset comprises financial news articles collected from multiple sources, l
 ## Model Training and Evaluation
 
 
-'''
+```
 BERT Model Training
 |
 ├── Data Preprocessing
@@ -33,7 +33,7 @@ BERT Model Training
 └── Evaluation
     |
     ├── Accuracy, Precision, Recall, and F1-Score
-'''
+```
 
 ### Transfer Learning with BERT
 
