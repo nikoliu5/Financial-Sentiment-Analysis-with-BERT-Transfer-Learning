@@ -1,7 +1,7 @@
 # Financial-Sentiment-Analysis-with-BERT-Transfer-Learning
 This project utilizes BERT transfer learning to classify sentiment in financial texts
 
-<img src="./src_img/sentiment_analysis.jpg" width="650">
+<img src="./src_img/sentiment_analysis.jpg" width="600" height="500">
 
 ## Project Overview
 This project focuses on performing sentiment analysis on sentences from the financial domain using transfer learning with the BERT (Bidirectional Encoder Representations from Transformers) model. The objective is to develop a model that can accurately classify the sentiment of financial phrases as Negative, Neutral, or Positive.
@@ -62,11 +62,11 @@ Financial Sentiment Analysis with BERT Transfer Learning
 ### Analysis and Results
 Part I of the Financial Sentiment Analysis with BERT Transfer Learning project demonstrated the model's success in sentiment classification. The model achieved high precision, recall, and F1 scores across all sentiment classes after addressing data imbalance through resampling techniques. The training and validation accuracy graph 
 
-<img src="./src_img/training_result_p1.png" width="500" height="300">
+<img src="./src_img/training_result_p1.png" width="400" height="300">
 
 showed consistent learning without overfitting, and the model generalized well to unseen data. The label distribution after resampling 
 
-<img src="./src_img/balance_class.png" width="500"> 
+<img src="./src_img/balance_class.png" width="400"> 
 
 was uniform, contributing to the model's robustness.
 
@@ -76,17 +76,17 @@ In Part II, oversampling strategies and TensorFlow datasets were incorporated, f
 
 indicated high precision across all classes, with slightly lower recall for the negative class. The training-validation accuracy graph 
 
-<img src="./src_img/training_result_p2.png" width="500" height="300">
+<img src="./src_img/training_result_p2.png" width="400" height="300">
 
 showed stable learning and robust validation. Experiments with a 66% agreed dataset yielded 85-90% accuracy, highlighting the model's ability to approximate human judgment. The ROC curve 
 
-<img src="./src_img/AUC_ROC_p2.png" width="500" height="300">
+<img src="./src_img/AUC_ROC_p2.png" width="400" height="300">
 
 demonstrated the model's excellent classification capabilities, with AUC values close to 1 for all classes.
 
 Comparative analysis of transformer models like DistilBERT, BERT, and RoBERTa revealed high accuracy results, with BERT slightly outperforming the others. 
 
-<img src="./src_img/result_diff_models.png" width="300" height="200">
+<img src="./src_img/result_diff_models.png" width="300" height="100">
 
 The project also investigated the impact of training size on model performance, observing a sharp drop in accuracy below 100 training samples. This suggests that a minimum of 100 training samples could be the sweet spot for maintaining high accuracy with the DistilBERT architecture in financial sentiment analysis tasks.
 
