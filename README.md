@@ -1,7 +1,7 @@
 # Financial-Sentiment-Analysis-with-BERT-Transfer-Learning
 This project utilizes BERT transfer learning to classify sentiment in financial texts
 
-<img src="./src_img/sentiment_analysis.jpg" width="600" height="400">
+<img src="./src_img/sentiment_analysis.jpg" width="600" height="450">
 
 ## Project Overview
 This project focuses on performing sentiment analysis on sentences from the financial domain using transfer learning with the BERT (Bidirectional Encoder Representations from Transformers) model. The objective is to develop a model that can accurately classify the sentiment of financial phrases as Negative, Neutral, or Positive.
@@ -86,7 +86,7 @@ demonstrated the model's excellent classification capabilities, with AUC values 
 
 Comparative analysis of transformer models like DistilBERT, BERT, and RoBERTa revealed high accuracy results, with BERT slightly outperforming the others. 
 
-<img src="./src_img/result_diff_models.png" width="150" height="100">
+<img src="./src_img/result_diff_models.png" width="200" height="100">
 
 The project also investigated the impact of training size on model performance, observing a sharp drop in accuracy below 100 training samples. This suggests that a minimum of 100 training samples could be the sweet spot for maintaining high accuracy with the DistilBERT architecture in financial sentiment analysis tasks.
 
