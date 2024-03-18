@@ -1,0 +1,12 @@
+pandas
+matplotlib
+transformers
+datasets
+evaluate
+seaborn
+pynvml
+scipy
+scikit-learn
+tabulate
+imblearn
+tensorflow
